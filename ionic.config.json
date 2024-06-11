@@ -1,0 +1,8 @@
+{
+  "name": "Sophia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "de8b06be"
+}
