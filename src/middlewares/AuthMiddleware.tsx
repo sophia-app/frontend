@@ -1,12 +1,12 @@
-import React from "react";
+import { ReactNode } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { Redirect, useLocation } from "react-router-dom";
 
-type AuthGuardProps = {
-    children: React.ReactNode;
+type AuthMiddlewareProps = {
+    children: ReactNode;
 }
 
-export const AuthGuard = ({ children } : AuthGuardProps) => {
+export const AuthMiddleware = ({ children } : AuthMiddlewareProps) => {
     const { isAuth } = useAuth();
     const { pathname } = useLocation();
 

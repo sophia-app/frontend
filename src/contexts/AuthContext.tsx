@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode, createContext, useContext } from "react";
 import { useAuth } from "../hooks/useAuth";
 
 export type AuthContextProps = {
@@ -7,14 +7,14 @@ export type AuthContextProps = {
     logout: () => void;
 }
 
-const AuthContext = React.createContext<AuthContextProps>({
+const AuthContext = createContext<AuthContextProps>({
     isAuth: false,
     login: () => {},
     logout: () => {}
 });
 
 type AuthProviderProps = {
-    children: React.ReactNode;
+    children: ReactNode;
 }
 
 export const AuthProvider = ({ children } : AuthProviderProps) => {
@@ -28,5 +28,5 @@ export const AuthProvider = ({ children } : AuthProviderProps) => {
 }
 
 export const AuthConsumer = () => {
-    return React.useContext(AuthContext);
+    return useContext(AuthContext);
 }
