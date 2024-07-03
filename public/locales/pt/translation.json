@@ -1,0 +1,9 @@
+{
+	"labels": {
+		"username": "Usuário ou e-mail",
+		"password": "Senha"
+	},
+	"buttons": {
+		"login": "Entrar"
+	}
+}
